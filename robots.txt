@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://LucaFoschini.github.io/sitemap.xml 
