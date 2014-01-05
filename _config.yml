@@ -1,18 +1,16 @@
-name: Vapor Jekyll 
-description: Blogging about stuff
-meta_description: "A port of Ghost Vapor theme to Jekyll"
-baseurl: '/jekyll-vapor/'
+name: Luca Foschini
+description: Data Hacker
+meta_description: "Luca Foschini's personal pages"
+baseurl: '/'
 
 markdown: redcarpet
 pygments: true
-logo: '/images/vapor_logo.png'
-paginate: 3
 
 author:         
-  name: 'Your Name'
-  website: 'Your Website'
-  bio: 'Your Bio'
-  image: 'path/to/image'
+  name: 'Luca Foschini'
+  website: 'http://lucafoschini.com'
+  bio: ''
+  image: 'images/headshot.jpg'
 
 # Details for the RSS feed generator
-url:            'blog url'
+url:            'http://lucafoschini.com'
