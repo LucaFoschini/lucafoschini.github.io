@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>Vapor Jekyll</title>
+    <link>blog url</link>
+    <description>Blogging about stuff</description>
+    <pubDate>Sat, 04 Jan 2014 17:29:17 -0000</pubDate>
+    <item>
+      <title>Welcome to Jekyll!</title>
+      <link>blog url/2014/01/04/welcome-to-jekyll.html</link>
+      <description>&lt;p&gt;You&amp;#39;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+</description>
+      <pubDate>Sat, 04 Jan 2014 17:29:17 -0000</pubDate>
+      <dc:date>2014-01-04T17:29:17Z</dc:date>
+    </item>
+    <item>
+      <title>Empty Post</title>
+      <link>blog url/2014/01/04/another-empty-post.html</link>
+      <description>&lt;p&gt;An empty post&lt;/p&gt;
+</description>
+      <pubDate>Sat, 04 Jan 2014 17:29:01 -0000</pubDate>
+      <dc:date>2014-01-04T17:29:01Z</dc:date>
+    </item>
+    <item>
+      <title>Empty Post</title>
+      <link>blog url/2014/01/04/an-empty-post.html</link>
+      <description>&lt;p&gt;Another empty post&lt;/p&gt;
+</description>
+      <pubDate>Sat, 04 Jan 2014 17:29:00 -0000</pubDate>
+      <dc:date>2014-01-04T17:29:00Z</dc:date>
+    </item>
+    <item>
+      <title>A Final Empty Post</title>
+      <link>blog url/2014/01/04/a-final-empty-post.html</link>
+      <description>&lt;p&gt;A final empty post, just to show pagination&lt;/p&gt;
+</description>
+      <pubDate>Sat, 04 Jan 2014 17:29:00 -0000</pubDate>
+      <dc:date>2014-01-04T17:29:00Z</dc:date>
+    </item>
+    <dc:date>2014-01-04T17:29:17Z</dc:date>
+  </channel>
+</rss>

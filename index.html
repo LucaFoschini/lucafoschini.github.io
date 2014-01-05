@@ -1,122 +1,38 @@
+---
+layout: default
+title: Home
+cover: false
+about: '/about.html'
+---
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Luca Foschini</title>
-  <meta name="author" content="Luca Foschini">
-
-  
-  <meta name="description" content=" Blog Archives Recent Posts ">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://LucaFoschini.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Luca Foschini" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Luca Foschini</a></h1>
-  
-    <h2>(Engineer+Scientist)/2.</h2>
-  
-</hgroup>
-
+<header id="site-head">
+    {% if site.logo %}
+       <a id="blog-logo" href="{{ site.url }}">
+        <img src="{{ site.baseurl }}{{ site.logo }}" alt="Blog Logo" />
+       </a>
+    {% endif %}
+    <h1 class="blog-title"><a href="{{ site.url }}">{{ site.name }}</a></h1>
+    <h2 class="blog-description">{{ site.description }}
+    {% if page.about %} | <a href='{{site.baseurl}}{{ page.about }}'> About me </a> {% endif %}
+    </h2>
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:LucaFoschini.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-  </ul>
-</section>
+<main class="content" role="main">
 
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Luca Foschini -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+  {% for post in paginator.posts %}
+    <article class="preview">
+       <header>
+         <h1 class="post-title"><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></h1>
+         <div class="post-meta"><time datetime="{{ post.date | date: "%d %B, %Y" }}">{{ post.date | date: "%d %B, %Y" }}</time></div>
+       </header>
+       <section class="post-excerpt">
+           <p>{{ post.excerpt }}&hellip;</p>
+           <p class="readmore"><a href="{{ site.baseurl}}{{ post.url }}">Read this article <i class="fa fa-chevron-circle-right"></i></a></p>
+       </section>
+    </article>
+	 
+  {% endfor %}
+	 
+  {% include pagination.html %}
+	 
+</main>
