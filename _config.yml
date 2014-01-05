@@ -1,7 +1,7 @@
 name: Luca Foschini
 description: Data Hacker
 meta_description: "Luca Foschini's personal pages"
-baseurl: '/'
+baseurl: ''
 
 markdown: redcarpet
 pygments: true
