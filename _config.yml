@@ -9,8 +9,8 @@ pygments: true
 author:         
   name: 'Luca Foschini'
   website: 'http://lucafoschini.com'
-  bio: ''
-  image: 'images/headshot.jpg'
+  bio: 'Founder and data scientist at <a href="http://www.theactivityexchange.com/">The Activity Exchange</a>. Ph.D. in Approximation Algorithms from UCSB'
+  image: '/images/headshot.jpg'
 
 # Details for the RSS feed generator
 url:            'http://lucafoschini.com'

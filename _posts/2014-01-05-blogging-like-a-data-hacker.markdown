@@ -9,64 +9,142 @@ tags:
 
 ---
 
-I use [Wunderlist](http://www.wunderlist.com) for organizing my todo-lists. The todo-list that has seen the most activity in the last year is called *Future Blog Posts*. 
-
-Talk about procrastination.
+I use [Wunderlist](http://www.wunderlist.com) to organize my
+todo-lists. The todo-list that has seen the most activity in the last
+year is called *Future Blog Posts*. 
 
 {% include bladh/wunderlist_infographic.html %}
 
-As it always happens, [quantifying your own behavior](http://quantifiedself.com) leads to interesting insights. It quickly became apparent that the most reasonable way to contain such an unsustainable growth was to start consuming from that list. 
-
+As it almost always happens, [quantifying your own
+behavior](http://quantifiedself.com) leads to interesting insights. It
+quickly became apparent that the most reasonable way to contain such
+an unsustainable growth of potential creativity was to removing items
+from that list. 
 Hence blogging.
 
 > Getting out of the door is the hardest part
 
-When I start something, I usually spend an insane amount of time researching on all the possibilities. Then I move on to something else. I good way to counter this is to make-first, think later. In my books this means blog like you code, using your favorite revision control system and editor.
+When I start something, I usually spend an insane amount of time
+researching on all the possibilities. Then I move on to something
+else. A good way to counter this is to embrace the *make-first, think
+later* motto. In my books, this means blog like you code, using your
+favorite revision control system and editor.
 
 ## Blogging Like a Hacker
 
-[Github](http://github.com) Tom Preston-Werner's [Blogging Like a Hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html) says it all. Blog like you code. Prototype fast, see changes live, no meta-meta-meta styles. 
+[Github](http://github.com)'s Tom Preston-Werner says it all in [Blogging Like a
+Hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html).
+Blog like you code. Prototype fast, see changes live, use the tools
+you're already proficient with.
 
-Nowadays that concept has taken full shape in the [Github Pages](http://pages.github.com). A free hosting of personal pages for *Jekyll*. The number of people who are hosting their personal pages on github is quickly increasing:
+These days that concept has evolved into [Github
+Pages](http://pages.github.com), a free hosting service for static
+webpages, on *Github*. The number of people who are hosting their
+personal pages on *Github Pages* is quickly increasing:
 
 {% include bladh/github_io_infographic.html %}
 
-Reproducibility, open source is more the issue. You like me? Fork me on Github.
+However, the reason why I want my personal pages on *Github* is not
+even a matter of tools. It's a matter of principle. 
+
+> If you make something good, people will use it.
+
+No, they won't. They most likely won't even know you did it. 
+
+If you want others to build on your work, you have to lower the
+entrance barrier. Open source is not even the point anymore, it should
+be a given. There's plenty of open source code sitting in poorly
+documented archives stored on some academic's page. That's not useful,
+if the metric on which we measure usefulness is even only somewhat
+correlated to "the common good". 
+
+*Github* is a brilliant solution to the entrance barrier problem. It
+ makes it dead-simple to get started building on the work of others, and
+ safeguards the concept of intellectual property, which is
+ automatically built in the forking process. 
+In addition, *Github* provides social filters (rankings, voting) to
+ allow the good content to get recognition. 
+
+I envision the world applying the Github mantra to other things than
+code. Like this recipe? Fork it, replace garlic with shallots, re-share. Love
+this songs but want to change the lyrics? Love the movie but not the
+ending? Maybe some days we'll fork artworks, companies, and even
+physical objects.
+
+Like this? [Fork it, make it
+better](https://github.com/LucaFoschini/lucafoschini.github.io)!
+
 
 ## Beauty Matters
 
-As soon as I set on *Jekyll* ADD kicks in. Responsive, typography-oriented, mobile first, beautiful. I spend some time tinkering with the idea of making something like [Bret Victor](http://worrydream.com/)'s page.
+As soon as I settle on *Github Pages*, and therefore, *Jekyll* which
+is their processing engine, my ADHD kicks in. 
 
-Then I wake up. I enjoy great design but I'm not a designer, much like I love food but not a chef. So I must follow recipes, perhaps slightly twist them to meet my need. Cutting down on salt, add some vinegar, but don't wing amounts or cooking times, that's a recipe for disaster. So, templates.
+> Responsive, typography-oriented, mobile first. Beautiful. 
 
-I spend a few hours looking around *Jekyll* themes with non boring yet minimal typography, and that look good on mobile. 
-I came across a few nice articles on the matter (with code), by Stammy, Nicolas Hery. 
-I come across *Ghost* and *Vapor*. [Ghost](https://ghost.org/) is the new kid on the block, the media waxed poetic about it. *Vapor* is a *Ghost* theme by [Seth Lilly](http://sethlilly.com/), designed for responsiveness and with an eye on typography. 
+I spend some time tinkering with the idea of making something like [Bret
+Victor](http://worrydream.com/)'s page. Then I woke up. 
 
-*Ghost* and *Vapor* look great. Except, they're not based on Jekyll, nor they can be hosted on *Github Pages*. Make first, think later: I ported *Vapor* to *Jekyll*.
-Check it out [here](https://github.com/LucaFoschini/jekyll-vapor), and see it live [here](http://lucafoschini.github.io/jekyll-vapor/).
+I'm not a designer. I have an eye for design but don't know how to
+make it, much like one can love food without being a chef. 
+To make good food I must follow recipes, perhaps slightly
+twist them to meet my needs. Cutting down on salt, add some vinegar,
+but don't wing amounts or cooking times, that's a recipe for
+a recipe disaster. So, templates.
+
+I spend a few hours looking around *Jekyll* themes with non-boring yet
+minimal typography, and that look good on mobile. 
+See [this series of
+articles](http://paulstamatiou.com/responsive-retina-blog-development-part-1)
+by [Paul Stamatiou](http://paulstamatiou.com/about), and [this](http://nicolashery.com/fast-mobile-friendly-website-with-jekyll/)
+concise-yet-precise by [Nicolas Hery](http://nicolashery.com/) for
+some background on the topic.
+
+I then come across *Ghost* and *Vapor*. [Ghost](https://ghost.org/) is the
+new kid on the block among the blog platforms, the media [waxed
+poetic](http://techcrunch.com/2013/05/07/ghost-will-take-your-boring-blog-to-the-next-astral-plane/)
+about it. *Vapor* is a *Ghost* theme by [Seth
+Lilly](http://sethlilly.com/), designed for responsiveness and with an
+eye on typography. 
+
+*Ghost* and *Vapor* look great. Except, they're not based on Jekyll,
+ nor they can be hosted on *Github Pages*. Make first, think later: I
+ ported *Vapor* to *Jekyll*.
+[Go grab it](https://github.com/LucaFoschini/jekyll-vapor), see it live [here](http://lucafoschini.github.io/jekyll-vapor/).
 
 ## Data. Data. Data.
 
-Data Driven Journalist is officially a thing.
+> The data tells the story.
+
+Data-driven journalism is officially a thing.
 
 {% include bladh/data_driven_journalism_infographic.html %}
 
-Moreover, I personally have a hard time reading articles where claims are not supported by data (read: visualization). It's just a matter of bandwidth. 
+Moreover, I personally have a hard time reading articles where claims
+are not supported by data (read: visualization). It's just a matter of
+bandwidth. 
 
-That means, there must be nice charts and notebooks floating around.
-*Jekyll* is a winner, as it allows including gists, external source, simplicity of including simple html and tweak it.
+That means, there must be nice charts and [iPython
+notebooks](http://ipython.org/notebook.html) floating around.
+*Jekyll* is a winner again on this front, as it makes simple to include
+*gists* and content from other external sources.
 
 ## Wrap up
 
-Desiderata
+Desiderata:
 
- * Open Source
+ * on *Github*
  * Beautiful
  * Mobile First
  * Data Oriented
 
 {% include bladh/venn_blog_space.html %}
 
-Data hacker. Hacker: emphasis on the tools. tools to make tools. Data journalism: emphasis on the data. Data hacker. Tools to analyze and present data. With RMS.
+This is my attempt of making a blog for data hackers.
+
+Hackers make the tools to collect, process, and visualize data. Data
+journalists use those tools. Data hackers live in between. They
+focus on data but know how to make their own tools to collect it,
+process it and visualizing it. 
+
 
