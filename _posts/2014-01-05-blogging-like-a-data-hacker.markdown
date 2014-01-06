@@ -86,7 +86,7 @@ I spend some time tinkering with the idea of making something like [Bret
 Victor](http://worrydream.com/)'s page. Then I woke up. 
 
 I'm not a designer. I have an eye for design but don't know how to
-make it, much like one can love food without being a chef. 
+make it, much like one can love food without being an iron chef. 
 To make good food I must follow recipes, perhaps slightly
 twist them to meet my needs. Cutting down on salt, add some vinegar,
 but don't wing amounts or cooking times, that's a recipe for
