@@ -52,6 +52,8 @@ See an updated list of my publications [here](publications.html).
 I live in Santa Barbara, CA, where I spend most of my spare time at a
 small or negative distance from the Pacific Ocean. 
 
+I grew up on [Cappelletti](http://www.ciaoitalia.com/seasons/season-2200/episode-2226/cappeletti-in-broth) and [Piadina](en.wikipedia.org/wiki/Piadina) on a farm near Ravenna, Italy. 
+
 ##Resume
 
 See my full resume [here](here).
