@@ -1,0 +1,44 @@
+@media print { 
+ /* All your print styles go here */
+ #header, #footer, #nav { display: none !important; } 
+
+#site-head,
+article,
+nav,
+article.preview,
+a.archive-link,
+.article-nav {
+  margin: 20px auto;
+  max-width: 600px;
+  width: 90%;
+}
+
+p,
+li,
+dt,
+dd {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 24px;
+}
+
+h1 {
+  font-size: 22px;
+  line-height: 24px;
+}
+
+h2 {
+  margin-top: 1em;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 18px;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 16px;
+}

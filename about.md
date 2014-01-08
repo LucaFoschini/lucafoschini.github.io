@@ -40,12 +40,8 @@ See an updated list of my publications [here](publications.html).
 
 ##Education
 
- * Ph.D., Computer Science, UCSB (2012)
- * M.S., Computer Science, UCSB (2011)
- * Diploma di Licenza Specialistica, Sant'Anna School of Advanced Studies (2007)
- * M.E., Computer Engineering, University of Pisa (2007)
- * Diploma di Licenza, Sant'Anna School of Advanced Studies (2005)
- * B.E., Computer Engineering, University of Pisa (2004)
+{% capture education %}{% include education.md %}{% endcapture %}
+{{ education | markdownify }}
  
 ##Personal
 
@@ -56,5 +52,5 @@ I grew up on [Cappelletti](http://www.ciaoitalia.com/seasons/season-2200/episode
 
 ##Resume
 
-See my full resume [here](here).
+See my full resume [here](files/resume.pdf).
 
