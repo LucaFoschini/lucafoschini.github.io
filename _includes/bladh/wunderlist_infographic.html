@@ -1,1 +1,42 @@
-<div> Visualize the new idea creation on my Wunderlist on a timeline </div>
+<style>
+
+#chart svg {
+  height: 400px;
+}
+
+</style>
+
+
+<div id="chart">
+  <svg></svg>
+</div>
+
+<script type="text/javascript">
+ d3.json('/data/wunderlist.json', function(data) {
+
+nv.addGraph(function() {
+  var chart = nv.models.stackedAreaChart()
+                .x(function(d) { return d[0] })
+                .y(function(d) { return d[1] })
+                .clipEdge(true)
+                .tooltips(true)
+                .showControls(false);
+
+  chart.xAxis
+      .showMaxMin(false)
+      .tickFormat(function(d) { return d3.time.format('%x')(new Date(d)) });
+
+  chart.yAxis
+      .tickFormat(d3.format(',.2f'));
+
+  d3.select('#chart svg')
+    .datum(data)
+      .transition().duration(500).call(chart);
+
+  nv.utils.windowResize(chart.update);
+
+  return chart;
+});
+
+ })
+</script>
