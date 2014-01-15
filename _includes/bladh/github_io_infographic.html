@@ -1,1 +1,42 @@
-<div>Show an infographic on the number of personal websites hosted on github</div>
+<style>
+
+#chart1 svg {
+  height: 400px;
+}
+
+</style>
+
+
+<div id="chart1">
+  <svg></svg>
+</div>
+
+<script type="text/javascript">
+ d3.json('/data/githubIO.json', function(data) {
+
+nv.addGraph(function() {
+  var chart = nv.models.stackedAreaChart()
+                .x(function(d) { return d[0] })
+                .y(function(d) { return d[1] })
+                .tooltips(true)
+                .tooltipContent(function(key, y, e, graph) { return e})
+                .showControls(false);
+
+  chart.xAxis
+      .showMaxMin(false)
+      .tickFormat(function(d) { return d3.time.format('%x')(new Date(d)) });
+
+  chart.yAxis
+      .tickFormat(d3.format(',.2f'));
+
+  d3.select('#chart1 svg')
+    .datum(data)
+      .transition().duration(500).call(chart);
+
+  nv.utils.windowResize(chart.update);
+
+  return chart;
+});
+
+ })
+</script>

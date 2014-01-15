@@ -11,9 +11,9 @@ description: Data Scientist, Developer, Applied Mathematician
 I'm a co-founder and resident data scientist at [The Activity
 Exchange](http://www.theactivityexchange.com/). We founded the *The
 Activity Exchange* because we believe that behavioral science can
-provide insights to improve your health and quality of living. 
+provide insights to improve quality of living. 
 
-In the past, I worked 5 years on news article aggregation at
+In the past, I worked on news article aggregation at
 [Ask.com](http://www.ask.com), on community detection in social
 networks at [Google](www.google.com) and on low-latency web caching at
 the [CERN](http://www.cern.ch).
