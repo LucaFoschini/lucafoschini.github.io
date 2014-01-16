@@ -10,7 +10,7 @@
 <div id="chart">
   <svg></svg>
     <a style = "float:right; margin-top:-1.5em;padding-bottom:.5em; font-size:small" href =
-  'http://nbviewer.ipython.org/github/LucaFoschini/lucafoschini.github.io/blob/master/notebooks/process_wunderlist.ipynb'>See
+  'http://nbviewer.ipython.org/github/LucaFoschini/lucafoschini.github.io/blob/master/notebooks/process_wunderlist.ipynb'>Show me
   how to make this</a>
 </div>
 
@@ -21,7 +21,6 @@ nv.addGraph(function() {
   var chart = nv.models.stackedAreaChart()
                 .x(function(d) { return d[0] })
                 .y(function(d) { return d[1] })
-                .clipEdge(true)
                 .tooltips(true)
                 .showControls(false);
 
@@ -30,6 +29,9 @@ nv.addGraph(function() {
       .tickFormat(function(d) { return d3.time.format('%x')(new Date(d)) });
 
   chart.yAxis
+      .axisLabel('# items')
+      .axisLabelDistance(40)
+      .showMaxMin(false)
       .tickFormat(d3.format(',.0f'));
 
   d3.select('#chart svg')

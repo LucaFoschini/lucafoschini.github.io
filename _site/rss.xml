@@ -7,18 +7,20 @@
   <channel>
     <title>Luca Foschini</title>
     <link>http://lucafoschini.com</link>
-    <description>Data Hacker</description>
-    <pubDate>Sun, 05 Jan 2014 17:29:00 -0000</pubDate>
+    <description>Data Scientist</description>
+    <pubDate>Wed, 15 Jan 2014 17:29:00 -0000</pubDate>
     <item>
       <title>Blogging Like a [Data] Hacker</title>
-      <link>http://lucafoschini.com/2014/01/05/blogging-like-a-data-hacker.html</link>
+      <link>http://lucafoschini.com/2014/01/15/blogging-like-a-data-hacker.html</link>
       <description>&lt;p&gt;I use &lt;a href=&quot;http://www.wunderlist.com&quot;&gt;Wunderlist&lt;/a&gt; to organize my
-todo-lists. The todo-list that has seen the most activity in the last
-year is called &lt;em&gt;Future Blog Posts&lt;/em&gt;. &lt;/p&gt;
+todo-lists (work, personal, movies to watch, etc.) 
+Around a year ago, I thought it would be fun to keep a list of ideas
+that could make a nice blog post, so I started a &lt;strong&gt;future blog posts&lt;/strong&gt;
+list. &lt;/p&gt;
 </description>
-      <pubDate>Sun, 05 Jan 2014 17:29:00 -0000</pubDate>
-      <dc:date>2014-01-05T17:29:00Z</dc:date>
+      <pubDate>Wed, 15 Jan 2014 17:29:00 -0000</pubDate>
+      <dc:date>2014-01-15T17:29:00Z</dc:date>
     </item>
-    <dc:date>2014-01-05T17:29:00Z</dc:date>
+    <dc:date>2014-01-15T17:29:00Z</dc:date>
   </channel>
 </rss>

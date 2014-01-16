@@ -10,7 +10,7 @@
 <div id="chart1">
   <svg></svg>
       <a style = "float:right; margin-top:-1.5em;padding-bottom:.5em; font-size:small" href =
-  'http://nbviewer.ipython.org/github/LucaFoschini/lucafoschini.github.io/blob/master/notebooks/GithubIO.ipynb'>See
+  'http://nbviewer.ipython.org/github/LucaFoschini/lucafoschini.github.io/blob/master/notebooks/GithubIO.ipynb'>Show me
   how to make this</a>
 
 </div>
@@ -31,6 +31,7 @@ nv.addGraph(function() {
       .tickFormat(function(d) { return d3.time.format('%x')(new Date(d)) });
 
   chart.yAxis
+      .showMaxMin(false)
       .tickFormat(d3.format(',.2f'));
 
   d3.select('#chart1 svg')
