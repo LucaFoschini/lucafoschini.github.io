@@ -52,7 +52,7 @@ a recommended read.
 
 Five years have passed since Tom's post, and today [Github
 Pages](http://pages.github.com) is a fully-fledged, **free hosting
-service for static webpages**, on Github. You write your pages in a
+service for static webpages**, on *Github*. You write your pages in a
 simple markdown language, organize them in a straightforward
 directory structure, and *Github* does the rest.
 
@@ -169,7 +169,7 @@ analysis, you'll see the charts updating in your local copy instantly.
 
 As data-driven blogging is becoming a thing
 (and for some even a [profitable business](http://techcrunch.com/2013/11/26/priceonomics-data-services/)) and infographics are
-starting to misplace traditional journalism (see the tongue-in-cheek
+starting to replace traditional journalism (see the tongue-in-cheek
 chart below) I felt the urge to jump on the bandwagon.
 
 
