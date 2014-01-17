@@ -39,7 +39,7 @@ Then I move on to something else.
 
 > Getting out of the door is the hardest part
 
-A good way to counter this is to embrace the *make-first, think
+A good way to counter this is to embrace the *make first, think
 later* motto. Or, [keep your dopamine up](http://blog.idonethis.com/post/70179626669/the-science-of-motivation-your-brain-on-dopamine).
 For me, this means using the tools that I already master to quickly
 make progress. That is, I should be blogging like I code, leveraging
