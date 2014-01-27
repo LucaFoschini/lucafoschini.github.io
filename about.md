@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Luca Foschini
-description: Data Scientist, Developer, Applied Mathematician
+description: Data Scientist, Engineer.
 ---
 
 ![Luca Foschini](/images/headshot@750x500.jpg "Luca Foschini")
@@ -9,9 +9,9 @@ description: Data Scientist, Developer, Applied Mathematician
 ##Professional
 
 I'm a co-founder and resident data scientist at [The Activity
-Exchange](http://www.theactivityexchange.com/). We founded the *The
+Exchange](http://www.theactivityexchange.com/). [We](http://www.theactivityexchange.com/about.html) started the *The
 Activity Exchange* because we believe that behavioral science can
-provide insights to improve quality of living. 
+provide insights to improve the quality of life. 
 
 In the past, I worked on news article aggregation at
 [Ask.com](http://www.ask.com), on community detection in social
@@ -20,23 +20,32 @@ the [CERN](http://www.cern.ch).
 
 ##Research
 
-I received a Ph.D. in Computer Science from UCSB, under the guidance
-of Professor [Subhash Suri](http://www.cs.ucsb.edu/~suri).
+My research focuses on designing efficient algorithms for finding
+**approximate solutions** to problems for which computing an exact solution
+would require an impractical amount of resources. 
 
-My researched focuses on developing efficient algorithms for computing
-fundamental statistics on large streams of data. 
-The proposed schemes come with sound theoretical foundations and are
-simple enough to perform tasks such as outlier detection in real-time
-on high-speed networks.
+Simply put, a recurrent pattern you'd find in my research papers
+is *"This theorem proves that this problems can't be solved
+exactly on large inputs within a reasonable amount of time or memory,
+but if you're willing to settle for a slightly suboptimal solution, here's
+an algorithm that can compute that efficiently."*
 
-During my Ph.D. and visiting researching at [Google
-Research](research.google.com), [ETH Zurich](http://www.ethz.ch/), and
-[UIUC](http://illinois.edu) I've enjoyed collaborating with
-scholars from many different fields of study. These includes *graph
-partitioning*, *vehicle routing*, *computer security*, *data
-compression*, and *computer vision*. 
+![Main research focus](/images/research_phd.png "Main research focus")
 
-See an updated list of my publications [here](publications.html).
+The problems I studied include [detecting
+outliers](/papers/Efficiently_NSDI11.pdf) on large streams of network packets in real time; quickly [finding shortest paths](/papers/Complexity_Algorithmica.pdf) in
+road networks under heavy traffic conditions; and efficiently [partitioning
+large graphs](/papers/Balanced_Algorithmica.pdf) into balanced components. 
+
+
+During my Ph.D. I was lucky enough to spend time visiting prestigious
+research institutions such as [Google Research](research.google.com),
+[ETH Zurich](http://www.ethz.ch/), and [UIUC](http://illinois.edu). 
+That allowed me to collaborate with scholars from many different
+fields of study, including [computational
+geometry](/papers/Union_ESA11.pdf), [computer security](/papers/Getting_WOOT11.pdf), [data compression](/papers/Indexing_TOA.pdf), and [computer vision](/papers/Efficiently_ICIP11.pdf). 
+
+You can find a complete list of my publications [here](publications.html).
 
 ##Education
 
@@ -47,6 +56,8 @@ See an updated list of my publications [here](publications.html).
 
 I live in Santa Barbara, CA, where I spend most of my spare time at a
 small or negative distance from the Pacific Ocean. 
+
+![Secret surf spot](/images/SB.jpg "Secret surf spot")
 
 I grew up on [Cappelletti](http://www.ciaoitalia.com/seasons/season-2200/episode-2226/cappeletti-in-broth) and [Piadina](en.wikipedia.org/wiki/Piadina) on a farm near Ravenna, Italy. 
 
