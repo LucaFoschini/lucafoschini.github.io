@@ -15,20 +15,19 @@ Around a year ago, I thought it would be fun to keep a list of ideas
 that could make a nice blog post, so I started a **future blog posts**
 list. 
 
-A year later, the **future blog posts** list is the only reason why I
-still use *Wunderlist*.
+Over the last year I've added 113 items to all my lists. However, in the
+summer the activity on all other lists tapered, whereas ideas for
+potential blog posts kept accumulating steadily. (Toggle the series
+separately in the chart below to highlight the behavior) 
 
 {% include bladh/wunderlist_infographic.html %}
 
 As it almost always happens, [quantifying your own
 behavior](http://quantifiedself.com) leads to interesting insights. 
-Over the last year I've added 113 items to all my lists. However, in the
-summer the activity on all other lists tapered, whereas ideas for
-potential blog posts kept accumulating steadily. (Toggle the series
-separately to highlight the behavior) 
 
-It quickly became apparent that the most reasonable way to contain such
-an unsustainable growth of potential creativity was to **start checking off
+The analysis made me realize that the **future blog posts** list
+is the only reason why I still use *Wunderlist*. It also served the
+purpose to remind me that it's about time to **start marking off
 items** from that list. Hence blogging.
 
 ## Blogging Like a Hacker
@@ -37,7 +36,7 @@ When I start something, I usually spend an insane amount of time
 researching on all the possible alternatives to accomplish my task. 
 Then I move on to something else. 
 
-> Getting out of the door is the hardest part
+> Getting out of the door is the hardest part.
 
 A good way to counter this is to embrace the *make first, think
 later* motto. Or, [keep your dopamine up](http://blog.idonethis.com/post/70179626669/the-science-of-motivation-your-brain-on-dopamine).
@@ -45,25 +44,23 @@ For me, this means using the tools that I already master to quickly
 make progress. That is, I should be blogging like I code, leveraging
 my favorite revision control system and editor.
 
-[Github](http://github.com) CEO **Tom Preston-Werner** thoroughly elaborates
-on that in his post [Blogging Like a
+Five years ago, [Github](http://github.com) CEO **Tom
+Preston-Werner** thoroughly elaborates on that in his post [Blogging Like a
 Hacker](http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html),
 a recommended read.
 
-Five years have passed since Tom's post, and today [Github
+Today, Tom's idea has evolved to become [Github
 Pages](http://pages.github.com) is a fully-fledged, **free hosting
 service for static webpages**, on *Github*. You write your pages in a
 simple markdown language, organize them in a straightforward
 directory structure, and *Github* does the rest.
 
-It's no surprise that such a service, provided for free, is quickly
-**gaining popularity**.
+Unsurprisingly, *Github Pages* is quickly **gaining popularity**.
 
 The chart below shows the **activity** on *Github Pages* (measured as
 number of pushes per month to \*.github.io repositories, usually
 used to host personal pages) normalized on the activity on all
-*Github* repositories. The normalization is necessary as *Github* is
-quickly gaining popularity as a whole. 
+*Github* repositories. 
 
 {% include bladh/github_io_infographic.html %}
 
@@ -96,14 +93,15 @@ Like this? [Fork it, make it better](https://github.com/LucaFoschini/lucafoschin
 
 ## Beauty Matters
 
-The low barrier to get started is however not sufficient to make your
-content appealing to others. It will have a better chance to be
-adopted if it **looks beautiful**.
+Ease of access is however not enough to make your content appealing to
+others. It will get a chance to be adopted only if it **looks
+beautiful**.
 
 > Responsive, typography-oriented, mobile first. Beautiful. 
 
-I spend some time tinkering with the idea that my blog should look
-like [Bret Victor](http://worrydream.com/)'s page. Then I woke up. 
+I spent some time daydreaming about my blog looking like the visual
+wonderland of [Bret Victor](http://worrydream.com/)'s page. Then I
+woke up. 
 
 I'm not a designer. I have an eye for design but don't know how to
 make it, much like one can love food without being an iron chef. 
@@ -112,15 +110,16 @@ twisting them to meet my needs. Cut down on salt, add some vinegar,
 but never wing quantities or cooking times, that's a recipe for
 a recipe disaster. So, templates.
 
-I spend a few hours looking around *Jekyll* (the engine powering
-*Github* pages) themes with non-boring yet minimal typography, and
-that look good on mobile.  See [this series of
+Since I was set on *Github pages*, I spent a few hours looking around
+for *Jekyll* (the engine powering *Github Pages*) themes with
+non-boring yet minimal typography that would look good on mobile.  See
+[this series of
 articles](http://paulstamatiou.com/responsive-retina-blog-development-part-1)
 by [Paul Stamatiou](http://paulstamatiou.com/about), and [this](http://nicolashery.com/fast-mobile-friendly-website-with-jekyll/)
 concise-yet-precise by [Nicolas Hery](http://nicolashery.com/) for
 some background on the topic.
 
-I then come across *Ghost* and *Vapor*. [Ghost](https://ghost.org/) is the
+I then came across *Ghost* and *Vapor*. [Ghost](https://ghost.org/) is the
 new kid on the block when it comes to blogging, the media [waxed
 poetic](http://techcrunch.com/2013/05/07/ghost-will-take-your-boring-blog-to-the-next-astral-plane/)
 about it. *Vapor* is a *Ghost* theme by [Seth
@@ -129,49 +128,50 @@ eye on typography.
 
 *Ghost* and *Vapor* look great. Except, they're not based on *Jekyll*,
  nor they can be hosted on *Github pages*. Make first, think later: I
- ported *Vapor* to *Jekyll* so I could use it on *Github pages*.
+ ended up porting *Vapor* to *Jekyll* so I could use it on *Github pages*.
 [Go grab it](https://github.com/LucaFoschini/jekyll-vapor), or see it live [here](http://lucafoschini.github.io/jekyll-vapor/).
 
 ## It's the Data, Stupid.
 
 Now that we've gone to great lengths elaborating on the *how* of
 blogging, we should devote some attention to the *what*. What is that
-I want so eagerly to blog about? To a data scientist, the what is
-necessarily the data. Or better, the what is *in* the data.
+I want so eagerly to blog about? To a data scientist, the *what* is
+necessarily the data. Or better, the *what* is *in* the data.
 
 > The data tells the story.
 
-Many stories, actually. And which one becomes more prominent is up who
-provides the interpretation of the data. The importance that the way
-such **interpretation** was derived is **reproducible** by others
-becomes then paramount.
+Many stories, actually. And the decision on which one becomes more
+prominent is up to whoever provides the interpretation of the
+data. Therefore, such **interpretation** should be **reproducible** by others.
 
 Practically, that translates into making available the plethora of
 tools and **intermediate results** that were involved in processing the
-data, starting from the sources, to the final output.
+data, starting from the sources to the final output.
 
 *Github* is again a winner on this front, as it makes it easy to
- organize all the heterogenous components that play a role in making a
+ organize all the heterogenous components that play a role in writing a
  post like this one, **enabling anyone to reproduce it on their system**.
 
-For example, this post is fully reproducible, as the source
-code of this post can be found [here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/_posts), the source for the charts is
-[here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/_includes/bladh), the data those charts use is [here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/data), and the scripts used to
+This post is fully reproducible, as the source
+code can be found [here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/_posts), the source for the charts is
+[here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/_includes/bladh),
+the data used is [here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/data), and the scripts used to
 process that data (*IPython Notebooks*) are [here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/notebooks). 
 
 Even more importantly, *Github pages* (rather, *Jekyll*) allows to
-seamlessly [interlink all these heterogenous
+seamlessly [interlink all those heterogenous
 components](http://jekyllrb.com/docs/templates/). That means that if
 you clone this post, play with the notebooks to perform a different
-analysis, you'll see the charts updating in your local copy instantly.
+analysis, you'll see the your local copy of the chart **updating instantly**.
    
 ## Conclusion
 
 As data-driven blogging is becoming a thing
 (and for some even a [profitable business](http://techcrunch.com/2013/11/26/priceonomics-data-services/)) and infographics are
 starting to replace traditional journalism (see the tongue-in-cheek
-chart below) I felt the urge to jump on the bandwagon.
-
+chart below) I felt the urge to jump on the bandwagon. That meant
+doing some research on the available tools that would serve the
+purpose of making blogging about data easy to (re-)produce. 
 
 {% include bladh/data_driven_journalism_infographic.html %}
 
@@ -183,5 +183,8 @@ chart below) I felt the urge to jump on the bandwagon.
  details of the presentation** with the goal of making it visually appealing, also a
  requirement for data-driven journalism.
 
-Let the blogging begin!
+I hope my findings can help other people with the same need in their
+decision process, and I'd love to hear what their conclusion will
+end up being, so please **share your thoughts**.
 
+In the meanwhile, let the blogging begin!
