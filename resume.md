@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: resume
 title: Luca Foschini
 ---
 
@@ -52,7 +52,7 @@ I put my code on **Github**, deploy webapps on **Heroku** (or locally on **Ruby 
 
 # Professional Experience
 
-## The Activity Exchange, Inc. - Sep. 2012 / -
+## The Activity Exchange, Inc. - Oct. 2012 / -
 ### Founder (Data Science)
 
 At the Activity Exchange, I had a major role in developing AchieveMint, a reward platform for healthy activities. My notable contributions are: 

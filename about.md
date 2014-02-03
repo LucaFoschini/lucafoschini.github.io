@@ -59,7 +59,10 @@ small or negative distance from the Pacific Ocean.
 
 ![Secret surf spot](/images/SB.jpg "Secret surf spot")
 
-I grew up on [Cappelletti](http://www.ciaoitalia.com/seasons/season-2200/episode-2226/cappeletti-in-broth) and [Piadina](en.wikipedia.org/wiki/Piadina) on a farm near Ravenna, Italy. 
+I grew up on
+[Cappelletti](http://www.ciaoitalia.com/seasons/season-2200/episode-2226/cappeletti-in-broth)
+and [Piadina](en.wikipedia.org/wiki/Piadina) on a farm near Ravenna,
+Italy. 
 
 ##Resume
 
