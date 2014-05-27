@@ -1,0 +1,418 @@
+---
+layout: post
+title:  "Could Machine Learning Have Helped Prevent the Isla Vista Shooting?"
+date:   2014-05-25 17:29:00
+tags:   
+ - text to speech
+ - sentiment analysis
+
+---
+
+On Friday night, May 23, 2014, a lone gunman [killed six people and injured
+seven more](http://www.independent.com/news/2014/may/23/shooting-isla-vista/)
+in a drive-by shooting in Isla Vista, CA. The suspect perpetrator Elliot Rodger,
+a 22-year-old student, also lost his life in the shooting.
+
+I went to grad school at UCSB and live a few miles from Isla Vista and
+I'm deeply saddened and horrified by the tragedy.
+
+In the aftermath of such tragic events, it is inevitable to pour our minds
+into wondering about what could have been done differently, where and
+when we failed as a society. 
+
+For once, it seems natural to think that we failed when
+we let a 22-year-old to have easy access to the lethal weapon that
+contributed materializing his thoughts.
+
+It also seems fair to argue that we failed as a society when we
+oversaw the _years_ the suspect claims to have spent "rotting
+in loneliness" as [he recounts](http://www.latimes.com/local/lanow/la-me-ln-transcript-ucsb-shootings-video-20140524-story.html). 
+
+Finally, we sure must have failed as a society when we engrained in
+the people's mind a disproportionate attachement to their social
+status, and even more so, when we made them believe that a rational
+response to a lack of adequacy in that department is unconditional
+revenge towards their peers. 
+You might argue that nothing can help prevent ["the work of a
+madman"](http://www.independent.com/news/2014/may/23/shooting-isla-vista/),
+but as much as folly is the epitome of irrationality, the ways of
+expressing itself are usually dully conformant to trends, and we're
+guilty of setting those trends.
+
+However, none of the considerations above would readily translate into
+preventive countermeasures to events of this sort. New policies would
+have to be deployed, the culture of an entire nation has to change. It
+will take a generation, perhaps.
+
+## Possible Countermeasures in the Short Term
+
+As someone who works with technology, the part that disturbed me the
+most was that the suspect posted [a video on
+youtube](https://www.youtube.com/watch?v=MQUW3Km01BM) titled 'Elliot Rodger's Retribution' [24 hours
+before the killing
+spree](http://www.nytimes.com/2014/05/25/us/california-drive-by-shooting.html?_r=0)
+In the video, the suspect vents his frustration and describes rather
+graphically and beyond any reasonable doubt his deadly intentions. 
+
+Just few weeks after a [14-year-old has been arrested over a prank-threat to an
+airline](http://www.cbsnews.com/news/dutch-girl-arrested-over-twitter-threat/)
+it would seem natural to expect that the 'Elliot Rodger's Retribution'
+video should provide enough evidence to trigger some precautionary measure. 
+
+However, there's a fundamental difference between those two cases. The
+Twitter prank was directed to humans, those reading the tweets
+directed to American Airlines, whereas Elliot Rodger's video
+wasn't directed to anyone in particular. Only a few cold-shouldered
+commenters could see it before it was too late. 
+
+And the youtube servers.
+
+If you bear to take a quick look at the video, the cues that hint at
+"negativity" are so overwhelming, so bluntly stated, that it would
+seem natural to think that three years after a [computer took
+down](http://www.nytimes.com/2011/02/17/science/17jeopardy-watson.html)
+the best of us humans at "Jeopardy!" the same computer should now be employed
+full time at peering through social media to **detect**, rather than
+playing, _real_ jeopardy. 
+
+I worked as an engineer for a couple of search engines, and have some
+basic understanding of automatic speech recognition and text mining, so I
+figured I would spend an afternoon testing out my hunches about whether
+current technology could have potentially helped automatically flag
+the suspect's video thus ultimately avert the shooting.
+
+### Sentiment Analysis on 'Elliot Rodger's Retribution' Video
+
+Detecting "negativity" in video content requires two steps.
+
+1. First, convert the video audio track into text;
+2. then, use some tool to automatically infer emotions from the extracted text.
+
+The first step is called "Speech Recognition" (SR) or "Speech to
+Text". The [research in
+SR](https://en.wikipedia.org/wiki/Speech_recognition) has roots in the
+dawn of computer science, and recent advances have made possible
+turning SR into widely adopted consumer products such as Siri or Windows Speech Recognition.
+
+Youtube has a built-in SR system for automatic captioning uploaded
+videos, based on the [google speech
+API](https://www.google.com/intl/en/chrome/demos/speech.html).
+
+That's right, Youtube already [automatically creates transcripts from video since 2009](http://googleblog.blogspot.com/2009/11/automatic-captions-in-youtube.html).
+
+The quickest way to get the transcript automatically generated by
+youtube is to use the great
+[youtube-dl](https://github.com/rg3/youtube-dl). The following command
+downloads the *.srt* (subtitles) for the video, and saves the audio
+track in *.wav* format, in case we want to try some other SR
+software later.
+
+	   youtube-dl -f bestaudio --write-auto-sub -x \
+	   	       --audio-format wav --audio-quality 0 \
+		       -k https://www.youtube.com/watch?v=MQUW3Km01BM
+
+The *.srt* file for the 'Elliot Rodger's Retribution' video can be found
+[here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/data/data/elliot_rodeger_retribution.en.srt)
+and it looks like this:
+
+    ...
+    11
+    00:00:42,480 --> 00:00:46,510
+    girls gave their affection
+    
+    12
+    00:00:46,510 --> 00:00:50,960
+    sec two other men
+    
+    13
+    00:00:50,960 --> 00:00:55,360
+    but never to me and 22 years old
+    
+    14
+    00:00:55,360 --> 00:00:59,170
+    still virgin never even kissed a girl
+    
+    15
+    00:00:59,170 --> 00:01:02,550
+    have been to college
+    
+    16
+    00:01:02,550 --> 00:01:06,720
+    two and a half years more than that
+    actually
+    ...
+
+The timestamps you see allow the captioning to be synched with the video. Let's extract the bare text:
+
+     cat elliot_rodeger_retribution.en.srt | egrep -v "^[0-9]+" \
+     	 | tr '\n' ' ' | tr  -C -d "a-zA-Z " | tr -s ' '
+
+This is the result:
+
+    hi owner Roger well this is my last video you know come to this tomorrow is that day in retribution the team richard my revenge against human against I love you last eight years of my life ever since I keep you reading have been forced to endure existence loans rejection and unfulfilled desires because grooms have never been attracted to me girls gave their affection sec two other men but never to me and 22 years old still virgin never even kissed a girl have been to college two and a half years more than that actually and I'm still virgin has been very torturous college is the time everyone experiences since things such as sexting time pleasure in those years I veterans it's not fair you girls have never been attracted to me I don't know why you girls are attracted to me I will punish you all for it it's an injustice a crime because I don't know what you don't see me the perfect guy you throw yourself know these obnoxious man in Sydney the supreme gentleman punish I'll love you for with the retribution I'm going to enter the hard earnings UCSB slaughter every singles Boyle stop line like I see inside their all those girls that desire so much they would have all rejected me in down hmmm inferior man if I ever made a sexual advance towards them well they throw themselves at these noxious group take great pleasure slaughtering view you will finally see that I am true the superior one the true alpha male after I've nightly every single girl in this take to the streets a violinist slaney missing persons popular kids live such lives hedonistic pleasure well I've had rock this for all these years people look down upon me every time I try to go out and join them you know treat me like a mouse now I will be a God compared to you while the animals you are an slider again you exacting retribution all those who deserve you do deserve it just for the crime living a better life than me the popular kids never accepted me your pay for girls whatever one to love you to be left by you want a girlfriend want sex love affection adoration you think a minority that's a crime can never be forgiven I can't have you guns I will destroy you you tonight me happy life intern will deny all human life only fair I hate I love you humanity casting wretched to train species if I had it in my power I would stop at nothing to reduce every single one of you to mountains and skulls rivers applied rightfully so deserve to pee nightly Elgin T you never showed me any mercy so I'll show you mine force me to suffer all my life now make you suffer waited a long time for this gave you exactly when you desire you are you girls you rejected me down upon me treated me like scam well you gave yourself and no human n for living a better life than me he sexually active men hate you I hate own I can't wait to give you exactly what you deserve IDR Niamh Lynch you
+
+Not great. But not too bad either. You can already see quite a few
+negative keywords there: *revenge, rejection, torturous, punish, slaughtering*...
+
+The sub-par quality of the extracted texts depends on the fact that
+speech recognition is not a trivial task. That is especially true when
+the recognition system can't be trained beforehand on the voice to
+recognize, like in this case. I explored some other solutions to try
+to achieve a better extraction accuracy. Below I describe the attempt
+with one such alternative, the google speech API v2. 
+
+#### Google Speech API V2
+
+The google speech API v2 was released informally a few days ago, and
+it is still undocumented. To reproduce my results, follow the steps described
+[here](https://github.com/gillesdemey/google-speech-v2/) after getting a
+developer key [here](https://console.developers.google.com) (make
+sure you follow the extra steps described
+[here](http://www.chromium.org/developers/how-tos/api-keys) to enable
+the Speech API in your API list.) 
+
+Then, install *ffmpeg* (*brew install ffmpeg* on mac) and convert your *.wav* file into *.flac* at 44100 Hz. 
+
+    ffmpeg -i threat.wav -ss 00:03:00  -vn -sample_fmt s32 \
+    	   -ar 44.1k -ac 2 -y -t 20 threat.flac
+
+The previous command takes a chunk of 20 seconds starting at the 3rd
+minute for the sake of explanation. The google speech API doesn't bode
+well with longer files, so you need to script some chunking logic
+there and submit the chunks one by one (making sure you don't exceed
+the 50 calls/day cap). When you finally submit the chunk:
+
+    curl -X POST --data-binary @threat.flac --header \
+    	 'Content-Type: audio/x-flac; rate=44100;' \
+    	 'https://www.google.com/speech-api/v2/recognize?output=json&lang=en-us&key=YOUR_KEY&client=chromium&maxresults=6&pfilter=2'
+
+The result doesn't seem to be better than the youtube transcripts:
+
+     {"result":[{"alternative":[{"transcript":"you finally see that I am the truth the superior won the true alpha male downs after I 79 Lincoln"},{"transcript":"you finally see that I am in truth a superior won the true alpha male downs after I 79 Lincoln"},{"transcript":"you finally see that I am the truth the superior won the true alpha male instruments and Nightwing"},{"transcript":"you finally see that I am in truth a superior won the true alpha male instruments and Nightwing"},{"transcript":"you finally see that I am the truth the superior won the true alpha male asteroids and Nightwing"},{"transcript":"you finally see that I am the truth the superior won the true alpha male instruments and nya Lee"}],"final":true}],"result_index":0}
+
+The correct text, according to [this human-curated transcription](http://www.latimes.com/local/lanow/la-me-ln-transcript-ucsb-shootings-video-20140524-story.html) should read:
+
+    You will finally see that I am, in truth, the superior one, the
+    true alpha male. [laughs] 
+
+You can see how the recognition software creatively assigned some
+meaning to the laughs.
+
+### Sentiment Analysis
+
+After trying a few more text recognition programs, the youtube
+ transcripts seemed to be the most accurate one. 
+
+Now the question is, could some automatic method identify that
+amorphous text blob as bearing some ominous meaning?
+
+The area of computer science and linguistic that study automatic
+identification of emotions from text is called **sentiment analysis**
+(or opinion mining). Sentiment analysis applies machine learning
+techniques to text analysis to derive the *polarity* of a given text
+(positive/neutral/negative). 
+
+The rise of social media in recent years, has fostered [a flurry of
+research around the
+topic](https://en.wikipedia.org/wiki/Sentiment_analysis) (and links thereafter). 
+
+Despite the thriving academic research on the topic though, not much
+readily available software packages for accurate sentiment analysis
+can be found online. See
+[here](http://www.quora.com/What-are-the-most-powerful-open-source-sentiment-analysis-tools)
+for a comprehensive list of the available tools.
+
+The commercial tool that seems to yield the best results on the text
+we're considering is provided by [lexalytics](http://www.lexalytics.com/). 
+This is the result of running their text analysis on the extracted text on
+their [web demo](http://www.lexalytics.com/web-demo):
+
+![Keyword identification](/images/lexalytics_kw.png "Negative keywords")
+
+The document sentiment is identified as **negative**, with a polarity
+score of -0.201 (on a scale from -1=negative to 1=positive). The
+absolute value of the detected negativity might not seem very high,
+but as we'll see in the next paragraph, it's pretty indicative when
+taken in comparison to what the same tool derives for other videos.
+
+*lexalytics* is also able to detect the themes present in the text,
+ and it seems pretty accurate in identifying the negative ones:
+
+![Theme Identification](/images/lexalytics_th.png "Negative themes")
+
+Another tool,
+[textalytics](http://textalytics.com/api-text-analysis-demo-en),
+suggests the following categorization for the 'Elliot Rodger's
+Retribution' transcripts (set the source as "blog"):
+
+       crime, law and justice > crime      (relevance: 100)
+       social issue > family > courtship   (relevance: 89 )
+       arts, culture and entertainment > 
+       	     	     customs and tradition (relevance: 83 )
+
+I have experimented with a few other tools for text mining and
+sentiment analysis, byt none of them provided better results than
+*lexalytics*. 
+Most of the tools I tried seemed to be unable to properly deal with
+the lack of grammar and punctuation present in the text extracted in
+speech recognition step. Among all tools I tried
+[textBlob](https://github.com/sloria/TextBlob) (python) deserves a
+mention as the most promising and easy to use.
+
+
+### Sentiment on Popular Youtube Videos
+
+To put the polarity score returned by *lexalytics* for the 'Elliot Rodger's
+Retribution'  into context, I ran the same sentiment analysis on the
+top 200 most popular videos on youtube (as downloaded on May
+24, 2014). *youtube-dl* came to the rescue again, as it can deal with
+playlists as well:
+
+	  youtube-dl -f bestaudio --write-auto-sub -x \
+	  	     --audio-format wav \
+		     https://www.youtube.com/playlist?list=PLrEnWoR732-BHrPp_Pm8_VleD68f9s14-
+
+The command above will download the 200 most popular youtube
+videos. In my case, only for 60 of them *youtube-dl* was able to find
+the automatically extracted subtitles.
+
+
+Performing the *lexalytics* sentiment analysis on each of the 60
+subtitle files downloaded involves a few steps:
+
+1. go to
+[http://www.lexalytics.com/web-demo](http://www.lexalytics.com/web-demo)
+and submit some text until they ask you to register;
+2. fill and submit the registration form;
+3. open the Chrome Developer Console in the "Network" panel and submit
+   some new text;
+4. you'll see the text is first submitted via ajax to the url
+   *http://www.lexalytics.com/demo/ajax/process*, then results are
+   fetched from *http://www.lexalytics.com/demo/ajax/result* using an
+   *id* and *config_id* returned by the first request;
+5. grab both requests by using "Copy as cURL" from Chrome's contextual menu;
+6. use the script below.
+
+This script assumes you have all the *.srt* subtitle files in the same
+folder. 
+Fill in the blanks (YOUR\_ADDITIONAL\_PARAMETERS, YOUR\_CONFIG\_ID) with
+the matching part of the full requests as copied from the Chrome
+Developer Console at step 5 above. 
+
+**Please don't abuse the script below**, be nice to *lexalytics*.
+
+	for file in *.srt; do 
+       	    echo "$file"; content=$(cat "$file"   | egrep -v "^[0-9]+" | tr '\n' ' ' | tr  -C -d "a-zA-Z " | tr -s ' ' ); 
+       	    result=$(curl -s 'http://www.lexalytics.com/demo/ajax/process' <YOUR_ADDITIONAL_PARAMETERS> --data "language=English&text=$content&data-mode=document&config-id=<YOUR_CONFIG_ID>&sc=300" --compressed); 
+       	    id=$(echo $result | cut -d '"' -f 6); 
+       	    config=$(echo $result | cut -d '"' -f 14); 
+       	    sleep 2; 
+       	    curl -s "http://www.lexalytics.com/demo/ajax/result?success=true&id=$id&mode=document&config_id=$config&language=English&sc=816" <YOUR_ADDITIONAL_PARAMETERS> > "$file".result_all; 
+       	    sleep 3; 
+   	done
+
+Once the script above completes, you should have a few *.result* files
+in your folder. Each *.result* file correspond to a *.srt* file and
+contains the json returned by *lexalytics*. If you just want to
+extract the polarity score from each of them, do:
+
+	for file in  *.result; do cat "$file" | python -mjson.tool \
+	    | grep -A 1 '^    "sentiment_polarity"' ; done \
+	    | grep "score" | cut -d ':' -f 2 | tr -d ',' | sort -nr \
+
+which returns the sorted list of the sentiment scores for the subtitle
+files:
+
+     -0.45193565
+     -0.30139995
+     -0.2883295
+     -0.1679538
+     -0.10668888
+
+     ...
+
+     0.42007107
+     0.43325004
+     0.45117143
+     0.545
+     0.6514667
+
+The list above tells us that the -0.201 polarity score previously identified
+for 'Elliot Rodger's Retribution' would have ranked 4th for negativity
+out of 60, or in 5th percentile of the distribution of the polarity
+scores for the youtube most popular videos. 
+
+# Conclusion
+
+The above analys provides evidence that available technology could be
+utilized to help automatically detect, and therefore act upon,
+potentially dangerous content in an online video. 
+
+Clearly, the above exercise is just a proof of concept and many issues
+remain to be addressed before one can claim any practical applicability.  
+
+For once, as it happens for any anomaly detection system, the rate of false
+positives can quickly make such a system impractical. A quick back of the envelope calculation shows that even if 
+only 5% of the [100 hours of video are uploaded to YouTube every
+minute](http://www.youtube.com/yt/press/statistics.html) were flagged
+as dangerous and escalated to human vetting, youtube would need to
+have 18,000 people watching videos 24/7 to confirm the
+dangerousness. 
+
+On the other hand, it's also true that all of the above is the result
+of an afternoon hack leveraging only publicly available tools and with
+no additional effort put into improving accuracy. In some sense,
+what I described before is the worst possible baseline for comparison,
+a toy example. Many possible simple improvements can be used to
+dramatically improve accuracy, for instance:
+
+- train the speech recognition software on other videos from the same
+person (Elliot Rodger's youtube channel, in this case). That would
+radically improve the speech recognition step;
+- infer pauses in speech and punctuation, to improve the grammar in
+the final result;
+- use a sentiment analysis tool resilient to the poor grammar that the
+SR step might still generate.
+
+In addition, albeit serving well the purpose of illustrating the
+concept, a generic "polarity score" would at best only constitute one
+of the possible signals that the detection system would use. A smarter
+detection system would:
+
+- be trained on hate speeches and restricted to detect similar ones;
+- don't simply categorize the extracted concepts/themes into
+  positive/negative, but also weight them according to some measure of
+  "dangerousness";
+- take into account other social indicators, such as comments from
+  other users;
+- consider video-specific features such as length, facial expressions,
+  voice pitch, etc.
+
+I fervently hope to see a lot of research on the topic in the
+forthcoming years. I'd like to see the bleeding edge tools for video
+content analysis paired with the state of the art of social media
+sentiment analysis. I'd like to see such research converted into consumer's
+technology, and deployed on a large scale.
+
+Scaling such a technology would then be challenging in its own rights,
+as even if the detection accuracy was made close to 100%, the
+responsiveness of the system could still be an issue, that is
+the time it takes from when a user uploads dangerous content to when
+the detection system acts on it. The Youtube video
+pipeline processes Gigabytes of data every second, and it's not 
+unexpected that most of the video analysis processing is batched and not
+performed in real time, which would ultimately increase the time to
+reaction.
+
+Finally, even if the video was correctly handed out to the authority
+within minutes from its upload, the actions taken might not help avert
+the crime, as it already happened in the specific case of Elliot Rodger, who
+[had been visited by the police in April, acting on the complaints of
+his mother, who was alarmed by videos he had posted
+online](http://www.nytimes.com/2014/05/25/us/california-drive-by-shooting.html). 
+
+In the specific case of the 'Elliot Rodger's Retribution' video, however, one
+would expect that enough evidence is provided for taking the
+suspect into custody. But when a human step is introduced in the
+process, the outcomes are unpredictable.
+

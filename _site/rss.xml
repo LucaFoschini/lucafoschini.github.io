@@ -8,7 +8,18 @@
     <title>Luca Foschini</title>
     <link>http://lucafoschini.com</link>
     <description>Data Scientist</description>
-    <pubDate>Wed, 15 Jan 2014 17:29:00 -0000</pubDate>
+    <pubDate>Sun, 25 May 2014 17:29:00 -0000</pubDate>
+    <item>
+      <title>Could Machine Learning Have Helped Prevent the Isla Vista Shooting?</title>
+      <link>http://lucafoschini.com/2014/05/25/machine-learning-isla-vista-shooting.html</link>
+      <description>&lt;p&gt;On Friday night, May 23, 2014, a lone gunman &lt;a href=&quot;http://www.independent.com/news/2014/may/23/shooting-isla-vista/&quot;&gt;killed six people and injured
+seven more&lt;/a&gt;
+in a drive-by shooting in Isla Vista, CA. The suspect perpetrator Elliot Rodger,
+a 22-year-old student, also lost his life in the shooting.&lt;/p&gt;
+</description>
+      <pubDate>Sun, 25 May 2014 17:29:00 -0000</pubDate>
+      <dc:date>2014-05-25T17:29:00Z</dc:date>
+    </item>
     <item>
       <title>Blogging Like a [Data] Hacker</title>
       <link>http://lucafoschini.com/2014/01/15/blogging-like-a-data-hacker.html</link>
@@ -21,6 +32,6 @@ list. &lt;/p&gt;
       <pubDate>Wed, 15 Jan 2014 17:29:00 -0000</pubDate>
       <dc:date>2014-01-15T17:29:00Z</dc:date>
     </item>
-    <dc:date>2014-01-15T17:29:00Z</dc:date>
+    <dc:date>2014-05-25T17:29:00Z</dc:date>
   </channel>
 </rss>
