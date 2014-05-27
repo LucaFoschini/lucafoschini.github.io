@@ -3,7 +3,7 @@ layout: post
 title:  "Could Machine Learning Have Helped Prevent the Isla Vista Shooting?"
 date:   2014-05-25 17:29:00
 tags:   
- - text to speech
+ - speech to text
  - sentiment analysis
 
 ---
@@ -112,7 +112,7 @@ software later.
 		       -k https://www.youtube.com/watch?v=MQUW3Km01BM
 
 The *.srt* file for the 'Elliot Rodger's Retribution' video can be found
-[here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/data/data/elliot_rodeger_retribution.en.srt)
+[here](https://github.com/LucaFoschini/lucafoschini.github.io/tree/master/data/elliot_rodeger_retribution.en.srt)
 and it looks like this:
 
     ...
@@ -256,7 +256,7 @@ sentiment analysis, byt none of them provided better results than
 Most of the tools I tried seemed to be unable to properly deal with
 the lack of grammar and punctuation present in the text extracted in
 speech recognition step. Among all tools I tried
-[textBlob](https://github.com/sloria/TextBlob) (python) deserves a
+[TextBlob](https://github.com/sloria/TextBlob) (Python) deserves a
 mention as the most promising and easy to use.
 
 
