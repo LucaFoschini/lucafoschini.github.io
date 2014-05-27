@@ -44,7 +44,7 @@ preventive countermeasures to events of this sort. New policies would
 have to be deployed, the culture of an entire nation has to change. It
 will take a generation, perhaps.
 
-## Possible Countermeasures in the Short Term
+# Possible Countermeasures in the Short Term
 
 As someone who works in technology, the part that disturbed me the
 most was that the suspect posted [a video on
@@ -81,7 +81,7 @@ figured I would spend an afternoon testing out my hunches about whether
 current technology could have helped flag
 the suspect's video thus potentially help thwart his plan.
 
-### Sentiment Analysis on 'Elliot Rodger's Retribution' Video
+## Sentiment Analysis on 'Elliot Rodger's Retribution' Video
 
 Detecting "negativity" in video content requires two steps:
 
@@ -94,7 +94,7 @@ SR](https://en.wikipedia.org/wiki/Speech_recognition) has roots in the
 dawn of computer science, and recent advances have made possible
 turning SR into widely adopted consumer products such as Siri or Windows Speech Recognition.
 
-#### Youtube Transcripts
+### Youtube Transcripts
 
 Youtube has a built-in SR system for automatic captioning uploaded
 videos, based on the [google speech
@@ -163,7 +163,7 @@ recognize, like in this case. I explored some other solutions to try
 to achieve a better extraction accuracy. Below I describe the attempt
 with one such alternative, the google speech API v2. 
 
-#### Google Speech API V2
+### Google Speech API V2
 
 The google speech API v2 was released unofficially a few days ago, and
 it is still undocumented. To reproduce my results, follow the steps described
@@ -200,7 +200,7 @@ The correct text, according to [this human-curated transcription](http://www.lat
 You can see how the recognition software creatively assigned some
 meaning to the laughs.
 
-#### Sentiment Analysis Tools
+### Sentiment Analysis Tools
 
 After trying a few more text recognition programs, the youtube
  transcripts seemed to be the most accurate one. 
@@ -261,7 +261,7 @@ the speech recognition step. Of all packages I tried
 [TextBlob](https://github.com/sloria/TextBlob) (Python) deserves a
 mention as the most promising and easy to use.
 
-#### Sentiment on Popular Youtube Videos
+### Sentiment on Popular Youtube Videos
 
 To put the polarity score returned by *lexalytics* for the 'Elliot Rodger's
 Retribution'  into context, I ran the same sentiment analysis on the
@@ -343,7 +343,7 @@ for 'Elliot Rodger's Retribution' would have ranked 4th for negativity
 out of 60, or in 5th percentile of the distribution of the polarity
 scores for the youtube most popular videos. 
 
-## Conclusion
+# Conclusion
 
 The above analys provides evidence that available technology could be
 utilized to help automatically detect, and therefore act up,
