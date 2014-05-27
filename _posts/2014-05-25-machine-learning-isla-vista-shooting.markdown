@@ -25,7 +25,7 @@ we let a 22-year-old to have easy access to the lethal weapon that
 contributed materializing his thoughts.
 
 It also seems fair to argue that we failed as a society when we
-oversaw the _years_ the suspect claims to have spent "rotting
+overlooked the _years_ the suspect claims to have spent "rotting
 in loneliness" as [he recounts](http://www.latimes.com/local/lanow/la-me-ln-transcript-ucsb-shootings-video-20140524-story.html). 
 
 Finally, we sure must have failed as a society when we engrained in
