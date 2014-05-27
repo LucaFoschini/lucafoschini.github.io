@@ -8,13 +8,13 @@ tags:
 
 ---
 
-On Friday, May 23 2014, a lone gunman [killed six people and injured
+On Friday, May 23, 2014, a lone gunman [killed six people and injured
 seven more](http://www.independent.com/news/2014/may/23/shooting-isla-vista/)
 in a drive-by shooting in Isla Vista, CA. The suspect perpetrator Elliot Rodger,
 a 22-year-old student, also lost his life in the shooting.
 
-I went to grad school at UCSB and live a few miles from Isla Vista.
-I'm deeply saddened and horrified by the tragedy.
+As a UCSB alumnus and Santa Barbara resident I'm deeply saddened and
+horrified by the tragedy.
 
 In the aftermath of such tragic events, it is inevitable to pour our minds
 into wondering about what could have been done differently, where and
@@ -44,7 +44,7 @@ preventive countermeasures to events of this sort. New policies would
 have to be deployed, the culture of an entire nation has to change. It
 will take a generation, perhaps.
 
-# Possible Countermeasures in the Short Term
+# Automatic Threat Identification
 
 As someone who works in technology, the part that disturbed me the
 most was that the suspect posted [a video on
@@ -345,7 +345,7 @@ scores for the youtube most popular videos.
 
 # Conclusion
 
-The above analys provides evidence that available technology could be
+The above analysis provides evidence that available technology could be
 utilized to help automatically detect, and therefore act up,
 potentially dangerous content in an online video. 
 
@@ -408,12 +408,11 @@ reaction.
 Finally, even if the video was correctly handed out to the authority
 within minutes from its upload, the actions taken might not help avert
 the ensuing crime, as it already happened in the specific case of Elliot Rodger, who
-[had been visited by the police in April, acting on the complaints of
-his mother, who was alarmed by videos he had posted
-online](http://www.nytimes.com/2014/05/25/us/california-drive-by-shooting.html). 
+[had been visited by the police in April](http://www.nytimes.com/2014/05/25/us/california-drive-by-shooting.html), acting on the complaints of
+his mother, who was alarmed by videos he had posted online. 
 
-In the specific case of the 'Elliot Rodger's Retribution' video, however, one
-would expect that enough evidence is provided for taking the suspect
-into custody immediately. However, when a human step is
-introduced in the process, the outcome is unpredictable.
-
+The effectiveness of intervention of the authority is a very complex
+issue that would require much more than a blog post to be discussed. What
+this analysis tries to make the case for is that, all things being
+equal, such effectiveness could likely be improved by utilizing
+currently-available technology.
