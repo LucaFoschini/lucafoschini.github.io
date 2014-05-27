@@ -8,12 +8,12 @@ tags:
 
 ---
 
-On Friday night, May 23, 2014, a lone gunman [killed six people and injured
+On Friday, May 23 2014, a lone gunman [killed six people and injured
 seven more](http://www.independent.com/news/2014/may/23/shooting-isla-vista/)
 in a drive-by shooting in Isla Vista, CA. The suspect perpetrator Elliot Rodger,
 a 22-year-old student, also lost his life in the shooting.
 
-I went to grad school at UCSB and live a few miles from Isla Vista and
+I went to grad school at UCSB and live a few miles from Isla Vista.
 I'm deeply saddened and horrified by the tragedy.
 
 In the aftermath of such tragic events, it is inevitable to pour our minds
@@ -46,53 +46,55 @@ will take a generation, perhaps.
 
 ## Possible Countermeasures in the Short Term
 
-As someone who works with technology, the part that disturbed me the
+As someone who works in technology, the part that disturbed me the
 most was that the suspect posted [a video on
 youtube](https://www.youtube.com/watch?v=MQUW3Km01BM) titled 'Elliot Rodger's Retribution' [24 hours
 before the killing
-spree](http://www.nytimes.com/2014/05/25/us/california-drive-by-shooting.html?_r=0)
+spree](http://www.nytimes.com/2014/05/25/us/california-drive-by-shooting.html?_r=0).
 In the video, the suspect vents his frustration and describes rather
 graphically and beyond any reasonable doubt his deadly intentions. 
 
-Just few weeks after a [14-year-old has been arrested over a prank-threat to an
-airline](http://www.cbsnews.com/news/dutch-girl-arrested-over-twitter-threat/)
+Just few weeks after a [14-year-old was arrested over a prank-threat to an
+airline](http://www.cbsnews.com/news/dutch-girl-arrested-over-twitter-threat/),
 it would seem natural to expect that the 'Elliot Rodger's Retribution'
 video should provide enough evidence to trigger some precautionary measure. 
 
 However, there's a fundamental difference between those two cases. The
 Twitter prank was directed to humans, those reading the tweets
-directed to American Airlines, whereas Elliot Rodger's video
-wasn't directed to anyone in particular. Only a few cold-shouldered
-commenters could see it before it was too late. 
+to American Airlines, whereas Elliot Rodger's video
+wasn't directed to anyone in particular. 
 
-And the youtube servers.
+Only a few cold-shouldered commenters could see it before it was too
+late. And the youtube servers.
 
 If you bear to take a quick look at the video, the cues that hint at
 "negativity" are so overwhelming, so bluntly stated, that it would
 seem natural to think that three years after a [computer took
 down](http://www.nytimes.com/2011/02/17/science/17jeopardy-watson.html)
 the best of us humans at "Jeopardy!" the same computer should now be employed
-full time at peering through social media to **detect**, rather than
+full time at peering through social media to detect, rather than
 playing, _real_ jeopardy. 
 
 I worked as an engineer for a couple of search engines, and have some
 basic understanding of automatic speech recognition and text mining, so I
 figured I would spend an afternoon testing out my hunches about whether
-current technology could have potentially helped automatically flag
-the suspect's video thus ultimately avert the shooting.
+current technology could have helped flag
+the suspect's video thus potentially help thwart his plan.
 
 ### Sentiment Analysis on 'Elliot Rodger's Retribution' Video
 
-Detecting "negativity" in video content requires two steps.
+Detecting "negativity" in video content requires two steps:
 
-1. First, convert the video audio track into text;
-2. then, use some tool to automatically infer emotions from the extracted text.
+1. convert the video audio track into text;
+2. use some tool to automatically infer emotions from the extracted text.
 
 The first step is called "Speech Recognition" (SR) or "Speech to
 Text". The [research in
 SR](https://en.wikipedia.org/wiki/Speech_recognition) has roots in the
 dawn of computer science, and recent advances have made possible
 turning SR into widely adopted consumer products such as Siri or Windows Speech Recognition.
+
+#### Youtube Transcripts
 
 Youtube has a built-in SR system for automatic captioning uploaded
 videos, based on the [google speech
@@ -163,9 +165,9 @@ with one such alternative, the google speech API v2.
 
 #### Google Speech API V2
 
-The google speech API v2 was released informally a few days ago, and
+The google speech API v2 was released unofficially a few days ago, and
 it is still undocumented. To reproduce my results, follow the steps described
-[here](https://github.com/gillesdemey/google-speech-v2/) after getting a
+[here](https://github.com/gillesdemey/google-speech-v2/), after getting a
 developer key [here](https://console.developers.google.com) (make
 sure you follow the extra steps described
 [here](http://www.chromium.org/developers/how-tos/api-keys) to enable
@@ -198,7 +200,7 @@ The correct text, according to [this human-curated transcription](http://www.lat
 You can see how the recognition software creatively assigned some
 meaning to the laughs.
 
-### Sentiment Analysis
+#### Sentiment Analysis Tools
 
 After trying a few more text recognition programs, the youtube
  transcripts seemed to be the most accurate one. 
@@ -250,17 +252,16 @@ Retribution' transcripts (set the source as "blog"):
        arts, culture and entertainment > 
        	     	     customs and tradition (relevance: 83 )
 
-I have experimented with a few other tools for text mining and
-sentiment analysis, byt none of them provided better results than
-*lexalytics*. 
+I have experimented with some other text mining and
+sentiment analysis software, but none of them provided better results
+than *lexalytics*. 
 Most of the tools I tried seemed to be unable to properly deal with
 the lack of grammar and punctuation present in the text extracted in
-speech recognition step. Among all tools I tried
+the speech recognition step. Of all packages I tried
 [TextBlob](https://github.com/sloria/TextBlob) (Python) deserves a
 mention as the most promising and easy to use.
 
-
-### Sentiment on Popular Youtube Videos
+#### Sentiment on Popular Youtube Videos
 
 To put the polarity score returned by *lexalytics* for the 'Elliot Rodger's
 Retribution'  into context, I ran the same sentiment analysis on the
@@ -283,7 +284,7 @@ subtitle files downloaded involves a few steps:
 1. go to
 [http://www.lexalytics.com/web-demo](http://www.lexalytics.com/web-demo)
 and submit some text until they ask you to register;
-2. fill and submit the registration form;
+2. fill out and submit the registration form;
 3. open the Chrome Developer Console in the "Network" panel and submit
    some new text;
 4. you'll see the text is first submitted via ajax to the url
@@ -291,7 +292,7 @@ and submit some text until they ask you to register;
    fetched from *http://www.lexalytics.com/demo/ajax/result* using an
    *id* and *config_id* returned by the first request;
 5. grab both requests by using "Copy as cURL" from Chrome's contextual menu;
-6. use the script below.
+6. use the information retrieve in the previous step in the script below.
 
 This script assumes you have all the *.srt* subtitle files in the same
 folder. 
@@ -342,10 +343,10 @@ for 'Elliot Rodger's Retribution' would have ranked 4th for negativity
 out of 60, or in 5th percentile of the distribution of the polarity
 scores for the youtube most popular videos. 
 
-# Conclusion
+## Conclusion
 
 The above analys provides evidence that available technology could be
-utilized to help automatically detect, and therefore act upon,
+utilized to help automatically detect, and therefore act up,
 potentially dangerous content in an online video. 
 
 Clearly, the above exercise is just a proof of concept and many issues
@@ -356,8 +357,7 @@ positives can quickly make such a system impractical. A quick back of the envelo
 only 5% of the [100 hours of video are uploaded to YouTube every
 minute](http://www.youtube.com/yt/press/statistics.html) were flagged
 as dangerous and escalated to human vetting, youtube would need to
-have 18,000 people watching videos 24/7 to confirm the
-dangerousness. 
+have 300 people watching videos 24/7 to confirm the dangerousness. 
 
 On the other hand, it's also true that all of the above is the result
 of an afternoon hack leveraging only publicly available tools and with
@@ -379,7 +379,8 @@ concept, a generic "polarity score" would at best only constitute one
 of the possible signals that the detection system would use. A smarter
 detection system would:
 
-- be trained on hate speeches and restricted to detect similar ones;
+- be trained on hate speeches and restricted to detect similar ones,
+  rather than generic "negative" concepts;
 - don't simply categorize the extracted concepts/themes into
   positive/negative, but also weight them according to some measure of
   "dangerousness";
@@ -391,10 +392,10 @@ detection system would:
 I fervently hope to see a lot of research on the topic in the
 forthcoming years. I'd like to see the bleeding edge tools for video
 content analysis paired with the state of the art of social media
-sentiment analysis. I'd like to see such research converted into consumer's
-technology, and deployed on a large scale.
+sentiment analysis. I'd also like to see such research converted into
+consumer technology, and deployed on a large scale.
 
-Scaling such a technology would then be challenging in its own rights,
+Scaling such a technology would then be challenging in its own right,
 as even if the detection accuracy was made close to 100%, the
 responsiveness of the system could still be an issue, that is
 the time it takes from when a user uploads dangerous content to when
@@ -406,13 +407,13 @@ reaction.
 
 Finally, even if the video was correctly handed out to the authority
 within minutes from its upload, the actions taken might not help avert
-the crime, as it already happened in the specific case of Elliot Rodger, who
+the ensuing crime, as it already happened in the specific case of Elliot Rodger, who
 [had been visited by the police in April, acting on the complaints of
 his mother, who was alarmed by videos he had posted
 online](http://www.nytimes.com/2014/05/25/us/california-drive-by-shooting.html). 
 
 In the specific case of the 'Elliot Rodger's Retribution' video, however, one
-would expect that enough evidence is provided for taking the
-suspect into custody. But when a human step is introduced in the
-process, the outcomes are unpredictable.
+would expect that enough evidence is provided for taking the suspect
+into custody immediately. However, when a human step is
+introduced in the process, the outcome is unpredictable.
 
