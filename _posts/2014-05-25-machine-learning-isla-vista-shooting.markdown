@@ -9,7 +9,7 @@ tags:
 ---
 
 On Friday, May 23, 2014, a lone gunman [killed six people and injured
-seven more](http://www.independent.com/news/2014/may/23/shooting-isla-vista/)
+thirteen](http://www.independent.com/news/2014/may/23/shooting-isla-vista/)
 in a drive-by shooting in Isla Vista, CA. The suspect perpetrator Elliot Rodger,
 a 22-year-old student, also lost his life in the shooting.
 
@@ -218,7 +218,7 @@ The rise of social media in recent years, has fostered [a flurry of
 research around the
 topic](https://en.wikipedia.org/wiki/Sentiment_analysis) (and links thereafter). 
 
-Despite the thriving academic research on the topic though, not much
+Despite the thriving academic research on the topic though, not many
 readily available software packages for accurate sentiment analysis
 can be found online. See
 [here](http://www.quora.com/What-are-the-most-powerful-open-source-sentiment-analysis-tools)
@@ -292,7 +292,7 @@ and submit some text until they ask you to register;
    fetched from *http://www.lexalytics.com/demo/ajax/result* using an
    *id* and *config_id* returned by the first request;
 5. grab both requests by using "Copy as cURL" from Chrome's contextual menu;
-6. use the information retrieve in the previous step in the script below.
+6. use the information retrieved in the previous step in the script below.
 
 This script assumes you have all the *.srt* subtitle files in the same
 folder. 
@@ -364,7 +364,7 @@ of an afternoon hack leveraging only publicly available tools and with
 no additional effort put into improving accuracy. In some sense,
 what I described before is the worst possible baseline for comparison,
 a toy example. Many possible simple improvements can be used to
-dramatically improve accuracy, for instance:
+dramatically increase accuracy, for instance:
 
 - train the speech recognition software on other videos from the same
 person (Elliot Rodger's youtube channel, in this case). That would
