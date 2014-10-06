@@ -9,11 +9,11 @@ description: Data Scientist, Engineer.
 ##Professional
 
 I'm a co-founder and resident data scientist at [The Activity
-Exchange](http://www.theactivityexchange.com/). [We](http://www.theactivityexchange.com/about.html) started the *The
-Activity Exchange* because we believe that behavioral science can
-provide insights to improve the quality of life. 
+Exchange](http://www.theactivityexchange.com/). [We](http://www.theactivityexchange.com/about.html)
+started the *The Activity Exchange* because we believe that technology
+can use insights from behavioral analysis to make you healthier. 
 
-In the past, I worked on news article aggregation at
+In the past, I worked on aggregation of news articles at
 [Ask.com](http://www.ask.com), on community detection in social
 networks at [Google](www.google.com) and on low-latency web caching at
 the [CERN](http://www.cern.ch).
