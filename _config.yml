@@ -9,7 +9,7 @@ pygments: true
 author:         
   name: 'Luca Foschini'
   website: 'http://lucafoschini.com'
-  bio: 'Founder and data scientist at <a href="http://www.theactivityexchange.com/">The Activity Exchange</a>.<br>Ph.D in Computer Science from UCSB'
+  bio: 'Founder and Head of Data Science at <a href="http://www.evidation.com/">Evidation Health</a>.<br>Ph.D in Computer Science from UCSB'
   image: '/images/headshot.jpg'
   image_basename: '/images/headshot'
 

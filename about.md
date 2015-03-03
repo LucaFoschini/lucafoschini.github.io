@@ -8,10 +8,7 @@ description: Data Scientist, Engineer.
 
 ##Professional
 
-I'm a co-founder and resident data scientist at [The Activity
-Exchange](http://www.theactivityexchange.com/). [We](http://www.theactivityexchange.com/about.html)
-started the *The Activity Exchange* because we believe that technology
-can use insights from behavioral analysis to make you healthier. 
+I'm a co-founder and Head of Data Science at [Evidation Health](http://www.evidation.com/). 
 
 In the past, I worked on aggregation of news articles at
 [Ask.com](http://www.ask.com), on community detection in social
