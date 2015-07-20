@@ -11,7 +11,7 @@ title: Luca Foschini
 - Github: LucaFoschini
 - Twitter: @calimagna
 
-I'm Ph.D. graduate in **computer science**, specialized in algorithms for processing and analyzing large datasets. 
+I received my Ph.D. in **computer science** from UC Santa Barbara. My research focuses on the design of approximate algorithms for processing and analyzing large datasets. The applications of my research ranges from text compression to traffic engineering and community detection in large graphs.
 
 I was trained in **Computer Engineering** (BE/ME, University of Pisa) and **Computer Science** (MS/PhD, UCSB).
 
@@ -29,21 +29,21 @@ My academic research is highly interdisciplinar and touched upon a variety of su
 
 ## Code
 
-My go-to choices for programming languages are **Python** (more recently, **Julia**), **Ruby**, and **C++**. 
+My go-to choices for programming languages are **Python** and **C++**. 
 
-I've written code in a variety of other languages including Java, Objective C, Javascript, Perl, Bash, PHP, Pascal, Basic, Prolog, Lisp, x86 Assembly. 
+I've written code in a variety of other languages including Ruby, R,  Java, Objective C, Javascript, Perl, Bash, PHP, Pascal, Basic, Prolog, Lisp, x86 Assembly. 
 
-I have extensive experience in system and **network programming** (Unix), app development (**Android/iOS**), and database query languages: **(No)SQL**. In a previous life, I have hacked kernel modules, written driver code, programmed microcontrollers and patched binaries. 
+I have extensive experience in system and **network programming** (Unix), app development (**Android/iOS**), and database query languages: **(No)SQL**. In a previous life, I have hacked kernel modules, written driver code, programmed microcontrollers and patched binary files. 
 
 ## Data
 
-My daily tools are **R**, **Python** and **Tableau**. I scale things up using **Pig** on **Hadoop**. 
+The tools I use daily are **R**, **Python** and **Tableau**. I scale things up using **Spark** and **Elasticsearch**. 
 
 Data visualization plays a big part of my job, for which I use mostly **d3.js** (and derived libraries) 
 
 ## Tools
 
-I put my code on **Github**, deploy webapps on **Heroku** (or locally on **Ruby on Rails**), and stay organized with **Trello** and **Wrike**. I general write all my code in Emacs but switch to **Xcode** or **Eclipse** for mobile apps or **RStudio** for R. I write publication-quality documents in **LaTeX** and **Inkscape**.
+I put my code on **Github**, deploy webapps on **Heroku**, and stay organized with **PivotalTracker**. I general write all my code in Emacs but switch to **Xcode** or **Eclipse** for mobile apps or **RStudio** for R. I write publication-quality documents in **LaTeX** and **Inkscape**.
 
 # Education
 
@@ -51,6 +51,17 @@ I put my code on **Github**, deploy webapps on **Heroku** (or locally on **Ruby 
 {{ education | markdownify }}
 
 # Professional Experience
+
+## University of California, Santa Barbara. - Apr. 2015 / -
+## Visiting Researcher
+
+I work on machine learning methods to identify brain conditions from neuroimages. My focus it to apply network science and geometric methods to DSI (Diffusion Tensor Imaging).
+
+## Evidation Health,  Inc. - Jan. 2015 / -
+## Founder (Head of Data Science) 
+
+I lead the data science team at Evidation Health. This entails working on research papers, patents, and developing Evidation Health analytics.
+I built the first iteration of Evidation Health data pipeline, leveraging Spark and Elasticsearch. I've worked on machine learning research in collaboration with NYU, and behavioral psychology research in collaboration with UPenn/Wharton and HBS.
 
 ## The Activity Exchange, Inc. - Oct. 2012 / -
 ### Founder (Data Science)
